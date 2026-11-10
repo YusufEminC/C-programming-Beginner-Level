@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+   double price;
+   double finalprice;
+   
+   printf("Enter the price: ");
+   scanf("%lf", &price);
+   
+   if( price >= 100)
+{  finalprice = price * 0.9;
+}   
+   else
+{  finalprice = price;
+}   
+   printf("%.2f TL", finalprice);
+   return 0;
+}
