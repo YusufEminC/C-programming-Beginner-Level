@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main(void) {
+    double number1, number2;
+    char operation;
+
+    printf("Enter an expression: ");
+
+    if (scanf("%lf %c %lf", &number1, &operation, &number2) != 3) {
+        printf("Invalid input.\n");
+        return 1;
+    }
+
+    switch (operation) {
+        case '+':
+            printf("Result: %g\n", number1 + number2);
+            break;
+        case '-':
+            printf("Result: %g\n", number1 - number2);
+            break;
+        case '*':
+            printf("Result: %g\n", number1 * number2);
+            break;
+        case '/':
+            if (number2 == 0) {
+                printf("Cannot divide by zero.\n");
+            } else {
+                printf("Result: %g\n", number1 / number2);
+            }
+            break;
+        default:
+            printf("Invalid operator. Use +, -, *, or /.\n");
+    }
+
+    return 0;
+}
